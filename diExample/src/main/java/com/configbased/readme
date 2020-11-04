@@ -1,0 +1,1 @@
+Implementing the @Configuration class for declaring the beans and also indicating the primary profile without using spring-config.xml and application.properties
