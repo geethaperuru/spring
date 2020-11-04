@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>PMS</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/4.5.1/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+
+    <link href="../static/css/spring-core.css"
+          th:href="@{/css/spring-core.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome Geetha</h1>
+</div>
+    <table class="table table-striped">
+        <tr>
+            <td>
+                <a href="/products"><button class="btn" style="background-color:#dae0e5">View Products</button></a>
+            </td>
+            <td>
+                <a href="/customers"><button class="btn" style="background-color:#dae0e5">View Customers</button></a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

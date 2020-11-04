@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>PMS</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/4.5.1/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen" />
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+
+    <link href="../static/css/spring-core.css"
+          th:href="@{/css/spring-core.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Show Product</h2>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <td>
+                <label class="col-sm-5 control-label">Product Id:</label>
+            </td>
+            <td>
+                <p class="form-control-static" th:text="${product.id}">Product Id</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="col-sm-5 control-label">Name:</label>
+            </td>
+            <td>
+                <p class="form-control-static" th:text="${product.name}">Product Id</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="col-sm-5 control-label">Cost:</label>
+            </td>
+            <td>
+                <p class="form-control-static" th:text="${product.cost}">Product Id</p>
+            </td>
+        </tr>
+    </table>
+    <div class="row">
+        <div class="col-sm-6">
+            <a href="/products"><button class="btn btn-default" style="background-color:#dae0e5">View all Products</button></a>
+        </div>
+    </div>
+    <br/>
+        <div class="row">
+            <div class="col-sm-10">
+                <a th:href="${'/delete/'+product.id}"><button class="btn btn-default" style="background-color:#dae0e5">Delete</button></a>
+            </div>
+        </div>
+
+</div>
+</body>
+</html>
